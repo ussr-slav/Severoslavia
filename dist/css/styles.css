@@ -71034,5 +71034,14 @@ example:
   }
   */
 }
+.usa-navbar {
+  color: white;
+}
+.usa-navbar a {
+  color: white;
+}
+.usa-navbar a:hover {
+  color: get-color("base-lightest");
+}
 
 /*# sourceMappingURL=styles.css.map */
