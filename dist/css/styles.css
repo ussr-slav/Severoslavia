@@ -71034,13 +71034,15 @@ example:
   }
   */
 }
-.usa-header {
+.usa-logo a {
   color: white;
 }
 
-body {
-  background-color: white;
-  color: #1b1b1b;
+.usa-nav__primary > .usa-nav__primary-item > a {
+  color: white;
+}
+.usa-nav__primary > .usa-nav__primary-item > a:hover {
+  color: #f0f0f0;
 }
 
 /*# sourceMappingURL=styles.css.map */
