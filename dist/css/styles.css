@@ -71034,7 +71034,8 @@ example:
   }
   */
 }
-.usa-header {
+body {
+  background-color: #171716;
   color: white;
 }
 
