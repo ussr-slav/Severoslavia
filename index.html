@@ -27,11 +27,29 @@
           <li class="usa-nav__primary-item"><a class="usa-nav__link" href="/contact.html"><span>Contact</span></a></li>
         </ul>
       </nav>
-      <div class="usa-language-container">
-        <ul class="usa-list usa-list--inline">
-          <li><a href="/" lang="ru">Русский</a></li>
-          <li><a href="/ja" lang="ja" class="usa-current">日本語</a></li>
+      <div class="usa-language-menu usa-menu usa-position-relative">
+        <button class="usa-button" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu">
+          EN <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+            <use xlink:href="/dist/img/sprite.svg#expand_more"></use>
+          </svg>
+        </button>
+      
+        <ul class="usa-nav__submenu" id="lang-menu" hidden>
+          <li><a href="/" lang="en">RU</a></li>
+          <li><a href="/ja/" lang="ja">JA</a></li>
         </ul>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const button = document.querySelector(".usa-language-menu button");
+            const menu = document.getElementById("lang-menu");
+        
+            button.addEventListener("click", function () {
+              const expanded = button.getAttribute("aria-expanded") === "true";
+              button.setAttribute("aria-expanded", !expanded);
+              menu.hidden = expanded;
+            });
+          });
+        </script>
       </div>      
     </div>
   </header>
