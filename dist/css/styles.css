@@ -71034,9 +71034,13 @@ example:
   }
   */
 }
-body {
-  background-color: #171716;
+.usa-header {
   color: white;
+}
+
+body {
+  background-color: white;
+  color: #1b1b1b;
 }
 
 /*# sourceMappingURL=styles.css.map */
