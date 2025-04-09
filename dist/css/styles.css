@@ -8806,7 +8806,7 @@ button.usa-combo-box__clear-input:focus {
   }
 }
 .usa-logo a {
-  color: #1b1b1b;
+  color: #FFFFFF;
   text-decoration: none;
 }
 
@@ -10416,7 +10416,7 @@ html.usa-js-loading .usa-nav__submenu.usa-megamenu {
   .usa-nav__primary > .usa-nav__primary-item > a {
     line-height: 0.9;
     padding: 1rem;
-    color: #565c65;
+    color: #FFFFFF;
     display: block;
     font-weight: 700;
   }
@@ -71033,16 +71033,6 @@ example:
     );
   }
   */
-}
-.usa-logo a {
-  color: white;
-}
-
-.usa-nav__primary > .usa-nav__primary-item > a {
-  color: white;
-}
-.usa-nav__primary > .usa-nav__primary-item > a:hover {
-  color: #f0f0f0;
 }
 
 /*# sourceMappingURL=styles.css.map */
