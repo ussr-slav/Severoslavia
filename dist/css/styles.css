@@ -71044,4 +71044,11 @@ example:
   color: get-color("base-lightest");
 }
 
+.usa-nav__link {
+  color: white;
+}
+.usa-nav__link:hover {
+  color: get-color("base-lightest");
+}
+
 /*# sourceMappingURL=styles.css.map */
