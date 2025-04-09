@@ -71051,35 +71051,24 @@ example:
   color: get-color("base-lightest");
 }
 
-.language-dropdown {
-  position: relative;
-  display: inline-block;
+@media (min-width: 30em) {
+  .usa-button {
+    width: 4rem;
+  }
 }
-.language-dropdown .usa-button {
-  width: 160px;
-}
-.language-dropdown .usa-nav__submenu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  min-width: 160px;
-  background-color: #1a4480;
-  border: 1px solid #565c65;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  z-index: 10;
-}
-.language-dropdown .usa-nav__submenu li a {
-  display: block;
-  padding: 0.5rem 1rem;
-  color: white;
-  text-decoration: none;
-}
-.language-dropdown .usa-nav__submenu li a:hover {
-  background-color: #73b3e7;
-  color: black;
+@media (min-width: 64em) {
+  .usa-nav__submenu {
+    margin-bottom: 0;
+    margin-top: 0;
+    list-style-type: none;
+    padding-left: 0;
+    background-color: #162e51;
+    width: 4rem;
+    padding: 1rem;
+    position: absolute;
+    z-index: 400;
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
