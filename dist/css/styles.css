@@ -71044,10 +71044,10 @@ example:
   color: get-color("base-lightest");
 }
 
-.usa-nav__link {
+.usa-nav__primary > .usa-nav__primary-item > a {
   color: white;
 }
-.usa-nav__link:hover {
+.usa-nav__primary > .usa-nav__primary-item > a:hover {
   color: get-color("base-lightest");
 }
 
