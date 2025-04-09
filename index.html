@@ -1,44 +1,4 @@
 <!DOCTYPE html>
-<header class="govvs-header govvs-header--basic">
-  <div class="govvs-nav-container">
-    <div class="govvs-navbar">
-      <!-- サイトロゴ（任意でSVGや画像でもOK） -->
-      <div class="govvs-logo" id="logo">
-        <em class="govvs-logo__text">
-          <a href="/" title="Home" aria-label="Severoslavia Government">
-            Government of Severoslavia
-          </a>
-        </em>
-      </div>
-      <button class="govvs-menu-btn">Menu</button>
-    </div>
-
-    <nav role="navigation" class="govvs-nav">
-      <ul class="govvs-nav__primary govvs-accordion">
-        <li class="govvs-nav__primary-item">
-          <a class="govvs-nav__link" href="/about.html">
-            <span>About</span>
-          </a>
-        </li>
-        <li class="govvs-nav__primary-item">
-          <a class="govvs-nav__link" href="/services.html">
-            <span>Services</span>
-          </a>
-        </li>
-        <li class="govvs-nav__primary-item">
-          <a class="govvs-nav__link" href="/news.html">
-            <span>News</span>
-          </a>
-        </li>
-        <li class="govvs-nav__primary-item">
-          <a class="govvs-nav__link" href="/contact.html">
-            <span>Contact</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -48,11 +8,35 @@
 </head>
 <body>
 
+  <!-- gov.cz風ヘッダー -->
+  <header class="usa-header usa-header--basic bg-primary-dark">
+    <div class="usa-nav-container">
+      <div class="usa-navbar">
+        <div class="usa-logo" id="logo">
+          <em class="usa-logo__text">
+            <a href="/" title="Home">Government of Severoslavia</a>
+          </em>
+        </div>
+        <button class="usa-menu-btn">Menu</button>
+      </div>
+
+      <nav role="navigation" class="usa-nav">
+        <ul class="usa-nav__primary usa-accordion">
+          <li class="usa-nav__primary-item"><a class="usa-nav__link" href="/about.html"><span>About</span></a></li>
+          <li class="usa-nav__primary-item"><a class="usa-nav__link" href="/services.html"><span>Services</span></a></li>
+          <li class="usa-nav__primary-item"><a class="usa-nav__link" href="/news.html"><span>News</span></a></li>
+          <li class="usa-nav__primary-item"><a class="usa-nav__link" href="/contact.html"><span>Contact</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 本文セクション -->
   <main class="usa-section">
     <div class="usa-prose">
       <h1>Hello from Severoslavia!</h1>
       <p>This is a custom site using the U.S. Web Design System.</p>
-      <button class="usa-button">Click me</button>
+      <a href="#" class="usa-button">Click me</a>
     </div>
   </main>
 
