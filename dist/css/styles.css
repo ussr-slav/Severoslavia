@@ -71070,5 +71070,8 @@ example:
     text-align: center;
   }
 }
+.usa-header a {
+  color: #FFFFFF;
+}
 
 /*# sourceMappingURL=styles.css.map */
