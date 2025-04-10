@@ -71088,6 +71088,20 @@ example:
   text-decoration: underline;
 }
 
+@media (min-width: 64em) {
+  .usa-nav__primary > .usa-nav__primary-item > a {
+    line-height: 0.9;
+    padding: 1rem;
+    color: #FFFFFF;
+    display: block;
+    font-weight: 700;
+  }
+}
+.usa-logo__text a span {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
 .usa-language-menu {
   position: relative;
 }
