@@ -71034,14 +71034,18 @@ example:
   }
   */
 }
-.usa-navbar {
-  color: white;
+.usa-logo__text a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
-.usa-navbar a {
-  color: white;
+.usa-logo__text a img {
+  height: 3rem;
 }
-.usa-navbar a:hover {
-  color: get-color("base-lightest");
+.usa-logo__text a span {
+  font-weight: bold;
+  font-size: 1.2rem;
+  white-space: nowrap;
 }
 
 .usa-nav__primary > .usa-nav__primary-item > a {
@@ -71051,31 +71055,46 @@ example:
   color: get-color("base-lightest");
 }
 
-@media (min-width: 30em) {
-  .usa-button {
-    width: 4rem;
-  }
+.usa-nav {
+  display: none;
 }
-@media (min-width: 64em) {
-  .usa-nav__submenu {
-    margin-bottom: 0;
-    margin-top: 0;
-    list-style-type: none;
-    padding-left: 0;
-    background-color: #162e51;
-    width: 4rem;
-    padding: 1rem;
-    position: absolute;
-    z-index: 400;
-    text-align: center;
-  }
-}
-.usa-header a {
-  color: #FFFFFF;
+.usa-nav.is-visible {
+  display: block;
 }
 
-a:-webkit-any-link {
+.usa-language-menu {
+  position: relative;
+  display: inline-block;
+}
+.usa-language-menu .usa-button {
+  background-color: get-color("primary-dark");
+  color: white;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border: 1px solid white;
+  min-width: 6rem;
+}
+.usa-language-menu .usa-nav__submenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: get-color("primary-dark");
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid get-color("base-dark");
+  min-width: 100%;
+  z-index: 100;
+}
+.usa-language-menu .usa-nav__submenu li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: white;
   text-decoration: none;
+}
+.usa-language-menu .usa-nav__submenu li a:hover {
+  background-color: get-color("primary-lightest");
+  color: black;
 }
 
 /*# sourceMappingURL=styles.css.map */
