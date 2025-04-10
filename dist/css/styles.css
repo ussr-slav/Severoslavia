@@ -71034,48 +71034,105 @@ example:
   }
   */
 }
+.usa-header.bg-primary-dark {
+  background-color: get-color("primary-dark");
+}
+
+.usa-nav-container {
+  max-width: none;
+  margin: 0;
+  padding: 0 1rem;
+}
+
 .usa-navbar {
-  color: white;
-}
-.usa-navbar a {
-  color: white;
-}
-.usa-navbar a:hover {
-  color: get-color("base-lightest");
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
 }
 
-.usa-nav__primary > .usa-nav__primary-item > a {
-  color: white;
-}
-.usa-nav__primary > .usa-nav__primary-item > a:hover {
-  color: get-color("base-lightest");
-}
-
-@media (min-width: 30em) {
-  .usa-button {
-    width: 4rem;
-  }
-}
-@media (min-width: 64em) {
-  .usa-nav__submenu {
-    margin-bottom: 0;
-    margin-top: 0;
-    list-style-type: none;
-    padding-left: 0;
-    background-color: #162e51;
-    width: 4rem;
-    padding: 1rem;
-    position: absolute;
-    z-index: 400;
-    text-align: center;
-  }
-}
-.usa-header a {
-  color: #FFFFFF;
-}
-
-a:-webkit-any-link {
+.usa-logo__text a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   text-decoration: none;
+  color: white;
+}
+.usa-logo__text a img {
+  height: 3rem;
+}
+.usa-logo__text a span {
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+
+.usa-menu-btn {
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 0.5rem 1rem;
+}
+
+.usa-nav {
+  display: none;
+}
+.usa-nav.is-visible {
+  display: block;
+}
+
+.usa-nav__link {
+  color: white;
+  text-decoration: none;
+}
+.usa-nav__link:hover {
+  text-decoration: underline;
+}
+
+.usa-language-menu {
+  position: relative;
+}
+.usa-language-menu .usa-button {
+  background-color: get-color("primary-dark");
+  color: white;
+  border: 1px solid white;
+  min-width: 5rem;
+  cursor: pointer;
+}
+.usa-language-menu .usa-nav__submenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: get-color("primary-dark");
+  border: 1px solid get-color("base-dark");
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  min-width: 6rem;
+  z-index: 100;
+}
+.usa-language-menu .usa-nav__submenu li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+}
+.usa-language-menu .usa-nav__submenu li a:hover {
+  background-color: get-color("primary-lightest");
+  color: black;
+}
+
+body {
+  margin: 0;
+  background-color: white;
+}
+
+.usa-section {
+  padding: 2rem 1rem;
+}
+
+.usa-prose {
+  max-width: 60rem;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=styles.css.map */
