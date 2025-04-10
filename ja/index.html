@@ -18,11 +18,11 @@
               <span style="white-space: nowrap;">セヴェロスラヴィア<br>共和国政府</span>
             </a>
           </em>
-        </div>        
-        <button class="usa-menu-btn">Menu</button>
+        </div>
+        <button class="usa-menu-btn" id="menu-toggle">Menu</button>
       </div>
 
-      <nav role="navigation" class="usa-nav">
+      <nav role="navigation" class="usa-nav" id="main-menu">
         <ul class="usa-nav__primary usa-accordion">
           <li class="usa-nav__primary-item"><a class="usa-nav__link" href="/about.html"><span>About</span></a></li>
           <li class="usa-nav__primary-item"><a class="usa-nav__link" href="/services.html"><span>Services</span></a></li>
@@ -30,44 +30,57 @@
           <li class="usa-nav__primary-item"><a class="usa-nav__link" href="/contact.html"><span>Contact</span></a></li>
         </ul>
       </nav>
+
       <div class="usa-language-menu usa-menu usa-position-relative">
         <button class="usa-button" id="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu">JA</button>
-      
         <ul class="usa-nav__submenu" id="lang-menu" hidden>
           <li><a href="/" lang="ru">RU</a></li>
           <li><a href="/ja" lang="ja">JA</a></li>
         </ul>
-      
-        <script>
-          document.addEventListener("DOMContentLoaded", function () {
-            const button = document.getElementById("lang-toggle");
-            const menu = document.getElementById("lang-menu");
-      
-            button.addEventListener("click", function (e) {
-              e.stopPropagation();
-              const expanded = button.getAttribute("aria-expanded") === "true";
-              button.setAttribute("aria-expanded", !expanded);
-              menu.hidden = expanded;
-            });
-      
-            document.addEventListener("click", function () {
-              button.setAttribute("aria-expanded", false);
-              menu.hidden = true;
-            });
-      
-            menu.addEventListener("click", function (e) {
-              e.stopPropagation();
-            });
-          });
-        </script>
-      </div>           
+      </div>
     </div>
   </header>
+
   <main class="usa-section">
     <div class="usa-prose">
       <h1>セヴェロスラヴィアからようこそ！</h1>
     </div>
   </main>
+
+  <!-- JS: USWDSとカスタム -->
   <script src="../dist/js/uswds.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const langButton = document.getElementById("lang-toggle");
+      const langMenu = document.getElementById("lang-menu");
+      const menuButton = document.getElementById("menu-toggle");
+      const nav = document.getElementById("main-menu");
+
+      langButton.addEventListener("click", function (e) {
+        e.stopPropagation();
+        const expanded = langButton.getAttribute("aria-expanded") === "true";
+        langButton.setAttribute("aria-expanded", !expanded);
+        langMenu.hidden = expanded;
+      });
+
+      menuButton.addEventListener("click", function (e) {
+        e.stopPropagation();
+        nav.classList.toggle("is-visible");
+      });
+
+      document.addEventListener("click", function () {
+        langButton.setAttribute("aria-expanded", false);
+        langMenu.hidden = true;
+        nav.classList.remove("is-visible");
+      });
+
+      langMenu.addEventListener("click", function (e) {
+        e.stopPropagation();
+      });
+      nav.addEventListener("click", function (e) {
+        e.stopPropagation();
+      });
+    });
+  </script>
 </body>
 </html>
