@@ -71102,6 +71102,10 @@ example:
   font-size: 1.5rem;
 }
 
+.usa-logo__text a img {
+  height: 5rem;
+}
+
 .usa-language-menu {
   position: relative;
 }
