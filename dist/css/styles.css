@@ -71034,21 +71034,16 @@ example:
   }
   */
 }
-.usa-header.bg-primary-dark {
-  background-color: get-color("primary-dark");
-}
-
-.usa-nav-container {
-  max-width: none;
+body {
   margin: 0;
-  padding: 0 1rem;
+  background-color: #fff;
 }
 
 .usa-navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0;
+  padding: 0 1rem;
 }
 
 .usa-logo__text a {
@@ -71063,14 +71058,47 @@ example:
 }
 .usa-logo__text a span {
   font-weight: bold;
-  font-size: 1.05rem;
+  font-size: 1rem;
+  line-height: 1.2;
 }
 
 .usa-menu-btn {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 0.5rem 1rem;
+}
+
+.usa-language-menu {
+  position: relative;
+  margin-left: 1rem;
+}
+.usa-language-menu .usa-button {
   color: white;
   background-color: transparent;
   border: 1px solid white;
   padding: 0.5rem 1rem;
+}
+.usa-language-menu .usa-nav__submenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #333;
+  border: 1px solid #666;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  min-width: 6rem;
+  z-index: 100;
+}
+.usa-language-menu .usa-nav__submenu li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: white;
+}
+.usa-language-menu .usa-nav__submenu li a:hover {
+  background-color: #555;
 }
 
 .usa-nav {
@@ -71088,69 +71116,20 @@ example:
   text-decoration: underline;
 }
 
-@media (min-width: 64em) {
-  .usa-nav__primary > .usa-nav__primary-item > a {
-    line-height: 0.9;
-    padding: 1rem;
-    color: #FFFFFF;
-    display: block;
-    font-weight: 700;
+@media (max-width: 640px) {
+  .usa-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
   }
-}
-.usa-logo__text a span {
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-
-.usa-logo__text a img {
-  height: 5rem;
-}
-
-.usa-language-menu {
-  position: relative;
-}
-.usa-language-menu .usa-button {
-  background-color: get-color("primary-dark");
-  color: white;
-  border: 1px solid white;
-  min-width: 5rem;
-  cursor: pointer;
-}
-.usa-language-menu .usa-nav__submenu {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: get-color("primary-dark");
-  border: 1px solid get-color("base-dark");
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  min-width: 6rem;
-  z-index: 100;
-}
-.usa-language-menu .usa-nav__submenu li a {
-  display: block;
-  padding: 0.5rem 1rem;
-  color: white;
-  text-decoration: none;
-}
-.usa-language-menu .usa-nav__submenu li a:hover {
-  background-color: get-color("primary-lightest");
-  color: black;
-}
-
-body {
-  margin: 0;
-  background-color: white;
-}
-
-.usa-section {
-  padding: 2rem 1rem;
-}
-
-.usa-prose {
-  max-width: 60rem;
-  margin: 0 auto;
+  .usa-menu-btn {
+    margin-bottom: 0.5rem;
+  }
+  .usa-language-menu {
+    margin-bottom: 0.5rem;
+    align-self: flex-start;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
