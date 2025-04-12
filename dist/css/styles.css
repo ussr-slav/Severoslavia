@@ -71034,8 +71034,28 @@ example:
   }
   */
 }
+/* -----------------------
+   全体設定とレイアウト
+------------------------ */
+body {
+  margin: 0;
+  background-color: white;
+}
+
+.usa-section {
+  padding: 2rem 1rem;
+}
+
+.usa-prose {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+/* -----------------------
+   ナビゲーションとロゴ
+------------------------ */
 .usa-header.bg-primary-dark {
-  background-color: get-color("primary-dark");
+  background-color: #205493;
 }
 
 .usa-nav-container {
@@ -71050,29 +71070,28 @@ example:
   justify-content: space-between;
   padding: 0;
 }
-
-.usa-logo__text a {
+.usa-navbar .usa-logo {
+  margin-left: 0;
+}
+.usa-navbar .usa-logo .usa-logo__text a {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
   color: white;
 }
-.usa-logo__text a img {
+.usa-navbar .usa-logo .usa-logo__text a img {
   height: 3rem;
 }
-.usa-logo__text a span {
+.usa-navbar .usa-logo .usa-logo__text a span {
   font-weight: bold;
   font-size: 1.05rem;
+  white-space: nowrap;
 }
 
-.usa-menu-btn {
-  color: white;
-  background-color: transparent;
-  border: 1px solid white;
-  padding: 0.5rem 1rem;
-}
-
+/* -----------------------
+   メニューリンク
+------------------------ */
 .usa-nav {
   display: none;
 }
@@ -71088,40 +71107,30 @@ example:
   text-decoration: underline;
 }
 
-@media (min-width: 64em) {
-  .usa-nav__primary > .usa-nav__primary-item > a {
-    line-height: 0.9;
-    padding: 1rem;
-    color: #FFFFFF;
-    display: block;
-    font-weight: 700;
-  }
-}
-.usa-logo__text a span {
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-
-.usa-logo__text a img {
-  height: 5rem;
-}
-
+/* -----------------------
+   言語切替メニュー
+------------------------ */
 .usa-language-menu {
   position: relative;
 }
 .usa-language-menu .usa-button {
-  background-color: get-color("primary-dark");
+  background-color: #205493;
   color: white;
-  border: 1px solid white;
+  border: none;
   min-width: 5rem;
   cursor: pointer;
+}
+.usa-language-menu .usa-button::after {
+  content: "▼";
+  margin-left: 0.25rem;
+  font-size: 0.75rem;
 }
 .usa-language-menu .usa-nav__submenu {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: get-color("primary-dark");
-  border: 1px solid get-color("base-dark");
+  background-color: #205493;
+  border: 1px solid #112e51;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -71135,39 +71144,31 @@ example:
   text-decoration: none;
 }
 .usa-language-menu .usa-nav__submenu li a:hover {
-  background-color: get-color("primary-lightest");
+  background-color: #f0f0f0;
   color: black;
 }
 
-body {
-  margin: 0;
-  background-color: white;
-}
-
-.usa-section {
-  padding: 2rem 1rem;
-}
-
-.usa-prose {
-  max-width: 60rem;
-  margin: 0 auto;
-}
-
+/* -----------------------
+   モバイル対応
+------------------------ */
 @media (max-width: 768px) {
-  .usa-logo__text span .usa-logo__text a span {
-    white-space: nowrap;
+  .usa-logo__text span {
     font-size: 1rem;
+    white-space: nowrap;
+  }
+  .usa-logo__text img {
+    height: 2rem;
   }
   .usa-menu-btn {
     font-size: 0.9rem;
     padding: 0.25rem 0.5rem;
+    background: none;
+    border: 1px solid white;
+    color: white;
   }
   .usa-language-menu .usa-button {
     font-size: 0.9rem;
     padding: 0.25rem 0.5rem;
-  }
-  .usa-logo__text img .usa-logo__text a img {
-    height: 3rem;
   }
 }
 
