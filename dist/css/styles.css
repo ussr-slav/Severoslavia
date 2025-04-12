@@ -71168,7 +71168,7 @@ body {
     font-size: 1rem;
     white-space: nowrap;
   }
-  .usa-logo__text img {
+  .usa-navbar .usa-logo .usa-logo__text a img {
     height: 2rem;
   }
   .usa-menu-btn {
