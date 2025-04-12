@@ -71154,7 +71154,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  .usa-logo__text span {
+  .usa-logo__text span .usa-logo__text a span {
     white-space: nowrap;
     font-size: 1rem;
   }
@@ -71166,8 +71166,8 @@ body {
     font-size: 0.9rem;
     padding: 0.25rem 0.5rem;
   }
-  .usa-logo__text img {
-    height: 2rem;
+  .usa-logo__text img .usa-logo__text a img {
+    height: 3rem;
   }
 }
 
