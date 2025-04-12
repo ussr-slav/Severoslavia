@@ -71081,11 +71081,11 @@ body {
   color: white;
 }
 .usa-navbar .usa-logo .usa-logo__text a img {
-  height: 3rem;
+  height: 4rem;
 }
 .usa-navbar .usa-logo .usa-logo__text a span {
   font-weight: bold;
-  font-size: 1.05rem;
+  font-size: 1.5rem;
   white-space: nowrap;
 }
 
@@ -71107,6 +71107,18 @@ body {
   text-decoration: underline;
 }
 
+/* -----------------------
+   メニューリンク（PC用）
+------------------------ */
+@media (min-width: 64em) {
+  .usa-nav__primary > .usa-nav__primary-item > a {
+    line-height: 0.9;
+    padding: 1rem;
+    color: #FFFFFF;
+    display: block;
+    font-weight: 700;
+  }
+}
 /* -----------------------
    言語切替メニュー
 ------------------------ */
