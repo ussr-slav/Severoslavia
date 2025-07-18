@@ -4,61 +4,11 @@
   <meta charset="UTF-8" />
   <title>セヴェロスラヴィア共和国政府</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="../dist/css/styles.css" />
-  <link rel="icon" href="../assets/img/Coat_of_Arms_of_Severoslavia.png" type="image/x-icon" />
+  <link rel="stylesheet" href="../../dist/css/styles.css" />
+  <link rel="icon" href="../../assets/img/Coat_of_Arms_of_Severoslavia.png" type="image/x-icon" />
 </head>
 <body>
-  <header class="usa-header usa-header--basic bg-primary-dark text-white">
-    <div class="usa-nav-container">
-      <div class="usa-navbar">
-        <div class="usa-logo" id="logo">
-          <em class="usa-logo__text">
-            <a href="/ja">
-              <img src="../assets/img/Coat_of_Arms_of_Severoslavia.svg"/>
-              <span>セヴェロスラヴィア<br>共和国政府</span>
-            </a>
-          </em>
-        </div>
-        <button class="usa-menu-btn" id="menu-toggle">Menu</button>
-      </div>
-
-      <nav role="navigation" class="usa-nav" id="main-menu">
-        <ul class="usa-nav__primary usa-accordion">
-          <li class="usa-nav__primary-item">
-            <a class="usa-nav__link" href="./about">セヴェロスラヴィアについて</a>
-          </li>
-          <li class="usa-nav__primary-item">
-            <a class="usa-nav__link" href="./government">行政・政府情報</a>
-          </li>
-          <li class="usa-nav__primary-item">
-            <a class="usa-nav__link" href="./relations">外交・国際関係</a>
-          </li>
-          <li class="usa-nav__primary-item">
-            <a class="usa-nav__link" href="./economy">経済・ビジネス</a>
-          </li>
-          <li class="usa-nav__primary-item">
-            <a class="usa-nav__link" href="./culture">文化・観光</a>
-          </li>
-          <li class="usa-nav__primary-item">
-            <a class="usa-nav__link" href="./service">国民向けサービス</a>
-          </li>
-          <li class="usa-nav__primary-item">
-            <a class="usa-nav__link" href="./visa">移住・ビザ情報</a>
-          </li>
-        </ul>
-      </nav>
-
-      <div class="usa-language-menu usa-menu usa-position-relative">
-        <button class="usa-button" id="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu">
-          JA
-        </button>
-        <ul class="usa-nav__submenu" id="lang-menu" hidden>
-          <li><a href="/" lang="ru">RU</a></li>
-          <li><a href="/ja" lang="ja">JA</a></li>
-        </ul>
-      </div>
-    </div>
-  </header>
+    <div id="header"></div>
 
   <main class="usa-section">
     <div class="usa-prose">
@@ -66,45 +16,8 @@
       <!-- コンテンツをここに追加 -->
     </div>
   </main>
+  <script src="../../dist/js/uswds.min.js"></script>
+  <script src="../../loadHeader.js"></script>
 
-  <!-- USWDS本体 + カスタムJS -->
-  <script src="../dist/js/uswds.min.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-
-      const langButton = document.getElementById("lang-toggle");
-      const langMenu = document.getElementById("lang-menu");
-
-      langButton.addEventListener("click", function (e) {
-        e.stopPropagation();
-        const expanded = langButton.getAttribute("aria-expanded") === "true";
-        langButton.setAttribute("aria-expanded", !expanded);
-        langMenu.hidden = expanded;
-      });
-
-      const menuButton = document.getElementById("menu-toggle");
-      const nav = document.getElementById("main-menu");
-
-      menuButton.addEventListener("click", function (e) {
-        e.stopPropagation();
-        nav.classList.toggle("is-visible");
-      });
-
-      document.addEventListener("click", function () {
-
-        langButton.setAttribute("aria-expanded", false);
-        langMenu.hidden = true;
-
-        nav.classList.remove("is-visible");
-      });
-
-      langMenu.addEventListener("click", function (e) {
-        e.stopPropagation();
-      });
-      nav.addEventListener("click", function (e) {
-        e.stopPropagation();
-      });
-    });
-  </script>
 </body>
 </html>
