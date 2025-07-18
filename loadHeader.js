@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
-  fetch('/partials/header.html')
+  var lang = document.documentElement.lang;
+  var headerFile = '/partials/header-' + (lang === 'ja' ? 'ja' : 'en') + '.html';
+  fetch(headerFile)
     .then(function (response) { return response.text(); })
     .then(function (html) {
       var container = document.getElementById('header');
