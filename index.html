@@ -8,56 +8,13 @@
   <link rel="icon" href="assets/Coat_of_Arms_of_Severoslavia.svg" type="image/x-icon" />
 </head>
 <body>
-  <header class="usa-header usa-header--basic bg-primary-dark text-white">
-    <div class="usa-nav-container">
-      <div class="usa-navbar">
-        <div class="usa-logo" id="logo">
-          <em class="usa-logo__text">
-            <a href="/">Government of Severoslavia</a>
-          </em>
-        </div>
-        <button class="usa-menu-btn">Menu</button>
-      </div>
-
-      <nav role="navigation" class="usa-nav">
-        <ul class="usa-nav__primary usa-accordion">
-          <li class="usa-nav__primary-item"><a class="usa-nav__link" href="/about.html"><span>About</span></a></li>
-          <li class="usa-nav__primary-item"><a class="usa-nav__link" href="/services.html"><span>Services</span></a></li>
-          <li class="usa-nav__primary-item"><a class="usa-nav__link" href="/news.html"><span>News</span></a></li>
-          <li class="usa-nav__primary-item"><a class="usa-nav__link" href="/contact.html"><span>Contact</span></a></li>
-        </ul>
-      </nav>
-      <div class="usa-language-menu usa-menu usa-position-relative">
-        <button class="usa-button" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu">
-          RU <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
-            <use xlink:href="/dist/img/sprite.svg#expand_more"></use>
-          </svg>
-        </button>
-      
-        <ul class="usa-nav__submenu" id="lang-menu" hidden>
-          <li><a href="/" lang="en">RU</a></li>
-          <li><a href="/ja" lang="ja">JA</a></li>
-        </ul>
-        <script>
-          document.addEventListener("DOMContentLoaded", function () {
-            const button = document.querySelector(".usa-language-menu button");
-            const menu = document.getElementById("lang-menu");
-        
-            button.addEventListener("click", function () {
-              const expanded = button.getAttribute("aria-expanded") === "true";
-              button.setAttribute("aria-expanded", !expanded);
-              menu.hidden = expanded;
-            });
-          });
-        </script>
-      </div>      
-    </div>
-  </header>
+  <div id="header"></div>
   <main class="usa-section">
     <div class="usa-prose">
       <h1>Hello from Severoslavia!</h1>
     </div>
   </main>
   <script src="dist/js/uswds.min.js"></script>
+  <script src="loadHeader.js"></script>
 </body>
 </html>
